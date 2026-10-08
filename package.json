@@ -1,0 +1,13 @@
+{
+  "name": "cordova-plugin-crypto-hkdf",
+  "version": "1.0.0",
+  "description": "Native HKDF-SHA256 for TransferChain",
+  "license": "MIT",
+  "cordova": {
+    "id": "cordova-plugin-crypto-hkdf",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  }
+}

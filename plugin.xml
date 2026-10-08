@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-crypto-hkdf" version="1.0.0">
+    <name>HKDF</name>
+    <description>Native HKDF-SHA256, RFC 5869.</description>
+    <license>MIT</license>
+    <js-module src="www/HKDF.js" name="HKDF"><clobbers target="CryptoKit.HKDF" /></js-module>
+    <platform name="android">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HKDF"><param name="android-package" value="com.transferchain.hkdf.HKDF" /></feature>
+        </config-file>
+        <source-file src="src/android/HKDF.java" target-dir="src/com/transferchain/hkdf" />
+    </platform>
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="HKDF"><param name="ios-package" value="HKDF" /></feature>
+        </config-file>
+        <source-file src="src/ios/HKDF.swift" />
+        <framework src="CryptoKit.framework" />
+    </platform>
+</plugin>
